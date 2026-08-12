@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module uart_rx_tb();
+module tb();
 
      logic clk; 
      logic rst;
@@ -43,8 +43,15 @@ module uart_rx_tb();
     
     always #5 clk = ~clk;
     
-    
-    task automatic send_bit_pattern (input logic  [7:0] data_in);
+    property valid_pulse;
+        @(posedge clk)disable iff (rst)
+            valid |=> !valid;
+    endproperty
+    assert property (valid_pulse)
+        else $error("invalid pulse for valid signal");
+        
+        
+    task automatic send_bit_pattern (input logic [7:0] data_in);
     rx_pin = 1'b0; 
     repeat (dut.CLKS_PER_BIT) @(posedge clk);
     for (int i = 0; i < 8; i++) begin 
