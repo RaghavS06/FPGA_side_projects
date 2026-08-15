@@ -9,3 +9,12 @@ waveform from uart_rx testbench
 <p align="left">
   <img src="images/Screenshot 2026-08-11 174310.png" width="1000">
 </p>
+
+
+## SYNC/ASYNC FIFO design
+
+sync fifo test bench
+<p align="left">
+  <img src="images/image.png" width="1000">
+</p>
+this one was pretty fun because it was easy to stress test the design to make sure the empty/full flags were working properly.
