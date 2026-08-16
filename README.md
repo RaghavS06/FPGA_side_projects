@@ -1,6 +1,6 @@
 # FPGA_side_projects
 
-Self-explanatory. just a place i can put my modules i make and side projects where i learn cool things in SV.
+Self-explanatory. just a place i can put my modules i make and side projects where i learn cool things in SV. I put the testbench waveforms here for easy access, but if you want to see the actual code it is also in the code folders in the repo.
 
 
 ## UART TX/RX Transiever Project
